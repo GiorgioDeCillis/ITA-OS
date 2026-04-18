@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Emblem_of_Italy.svg" alt="Emblema Italia" width="120"/>
-
-  # ITA-OS (Sistema Operativo Italia)
+  <h1>🇮🇹 ITA-OS</h1>
+  <h3>Sistema Operativo Italia</h3>
   **Un'infrastruttura sicura, sovrana e moderna per la Pubblica Amministrazione.**
   <br/>
   Realizzato con ❤️ da **[Labeltune](https://labeltune.eu)**
+
 
 
   [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
