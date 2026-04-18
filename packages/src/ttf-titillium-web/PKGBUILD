@@ -1,0 +1,23 @@
+# Maintainer: ITA-OS Team
+pkgname=ttf-titillium-web
+pkgver=2.0
+pkgrel=1
+pkgdesc="Font Titillium Web — Font ufficiale delle linee guida di design della PA italiana"
+arch=('any')
+url="https://fonts.google.com/specimen/Titillium+Web"
+license=('OFL')
+depends=('fontconfig')
+source=("https://fonts.google.com/download?family=Titillium+Web")
+sha256sums=('SKIP')
+
+package() {
+    install -dm755 "${pkgdir}/usr/share/fonts/TTF/titillium-web"
+
+    # Install all font weights
+    find "${srcdir}" -name "*.ttf" -exec \
+        install -Dm644 {} "${pkgdir}/usr/share/fonts/TTF/titillium-web/" \;
+
+    # Install license
+    find "${srcdir}" -name "OFL.txt" -exec \
+        install -Dm644 {} "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE" \;
+}

@@ -1,0 +1,36 @@
+# Maintainer: ITA-OS Team
+pkgname=cie-middleware
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="Middleware per la Carta d'Identità Elettronica (CIE) italiana"
+arch=('x86_64')
+url="https://www.cartaidentita.interno.gov.it"
+license=('BSD')
+depends=('pcsclite' 'ccid' 'opensc' 'openssl' 'curl' 'libpng' 'freetype2' 'fontconfig')
+makedepends=('cmake' 'pkg-config' 'git')
+source=()
+# TODO: Add source URL from the official CIE middleware release
+# source=("https://github.com/nicola/cie-middleware-linux/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=()
+
+build() {
+    echo "TODO: Implement build step from CIE middleware source"
+    # cd "${srcdir}/cie-middleware-linux-${pkgver}"
+    # mkdir -p build && cd build
+    # cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+    # make
+}
+
+package() {
+    echo "TODO: Implement package step"
+    # cd "${srcdir}/cie-middleware-linux-${pkgver}/build"
+    # make DESTDIR="${pkgdir}" install
+    
+    # Install udev rules for smart card readers
+    install -Dm644 /dev/null "${pkgdir}/usr/lib/udev/rules.d/90-cie.rules"
+    echo '# CIE Smart Card Reader rules' > "${pkgdir}/usr/lib/udev/rules.d/90-cie.rules"
+    echo 'ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="*", ATTR{idProduct}=="*", TAG+="systemd", ENV{SYSTEMD_WANTS}="pcscd.service"' >> "${pkgdir}/usr/lib/udev/rules.d/90-cie.rules"
+    
+    # Enable pcscd service
+    install -dm755 "${pkgdir}/usr/lib/systemd/system/multi-user.target.wants"
+}

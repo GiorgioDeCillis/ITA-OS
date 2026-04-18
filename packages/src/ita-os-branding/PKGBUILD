@@ -1,0 +1,26 @@
+# Maintainer: ITA-OS Team
+pkgname=ita-os-branding
+pkgver=1.0
+pkgrel=1
+pkgdesc="Branding assets for ITA-OS: wallpapers, icons, and themes"
+arch=('any')
+url="https://github.com/GiorgioDeCillis/ita-os-packages"
+license=('MIT')
+depends=('hicolor-icon-theme')
+source=('standard.png'
+        'creative.png'
+        'advanced.png')
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP')
+
+package() {
+    # Install wallpapers
+    install -dm755 "${pkgdir}/usr/share/backgrounds/ita-os"
+    install -m644 "${srcdir}/standard.png" "${pkgdir}/usr/share/backgrounds/ita-os/standard.png"
+    install -m644 "${srcdir}/creative.png" "${pkgdir}/usr/share/backgrounds/ita-os/creative.png"
+    install -m644 "${srcdir}/advanced.png" "${pkgdir}/usr/share/backgrounds/ita-os/advanced.png"
+
+    # Create a symlink for the default wallpaper
+    ln -s "standard.png" "${pkgdir}/usr/share/backgrounds/ita-os/default.png"
+}

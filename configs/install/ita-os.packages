@@ -1,0 +1,64 @@
+# ============================================================
+# ITA-OS: Pacchetti aggiuntivi per la Pubblica Amministrazione
+# ============================================================
+# Questo file viene letto dal builder insieme a omarchy-base.packages
+# e omarchy-other.packages per costruire la ISO.
+# ============================================================
+
+# --- Smart Card / CIE (Carta d'Identità Elettronica) ---
+pcsc-tools
+ccid
+opensc
+# pcsc-cyberjack
+# libfreefare
+libnfc
+
+# --- Firma Digitale ---
+# Il middleware CIE è disponibile come AUR (cie-middleware-linux)
+# Per ora includiamo le dipendenze base
+openssl
+p11-kit
+
+# --- Font Istituzionali PA ---
+# Titillium Web - Font ufficiale linee guida design PA italiana
+# (da AUR o dal nostro repo packages)
+ttf-titillium-web
+
+# --- KDE Plasma (per profili Windows-like e Mac-like) ---
+plasma-desktop
+plasma-workspace
+plasma-systemmonitor
+plasma-nm
+plasma-pa
+kde-gtk-config
+kdeplasma-addons
+kscreen
+sddm-kcm
+breeze
+breeze-gtk
+konsole
+dolphin
+ark
+spectacle
+gwenview
+okular
+
+# --- Branding & Customizations ---
+ita-os-branding
+# ita-os-profile-switch (da inserire quando impacchettato)
+
+# --- Sistema italiano ---
+aspell-it
+hunspell-it
+hyphen-it
+mythes-it
+
+# --- Sicurezza aggiuntiva ---
+clamav
+firejail
+apparmor
+
+# --- Strumenti PA ---
+thunderbird
+thunderbird-i18n-it
+libreoffice-fresh-it
