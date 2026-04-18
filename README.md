@@ -1,13 +1,16 @@
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emblem_of_Italy.svg/200px-Emblem_of_Italy.svg.png" alt="Emblema Italia" width="100"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Emblem_of_Italy.svg" alt="Emblema Italia" width="120"/>
 
   # ITA-OS (Sistema Operativo Italia)
   **Un'infrastruttura sicura, sovrana e moderna per la Pubblica Amministrazione.**
 
   [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
   [![Linux Kernel](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](#)
+  [![Hyprland](https://img.shields.io/badge/Hyprland-00a884?style=for-the-badge&logo=hyprland&logoColor=white)](#)
+  [![KDE Plasma](https://img.shields.io/badge/KDE_Plasma-1D99F3?style=for-the-badge&logo=kde&logoColor=white)](#)
   [![Security](https://img.shields.io/badge/Security-Zero_Trust-D32F2F?style=for-the-badge)](#)
-  [![GovTech](https://img.shields.io/badge/GovTech-Digital_Sovereignty-009246?style=for-the-badge)](#)
+  [![CIE](https://img.shields.io/badge/CIE-Smart_Card_PA-0052cc?style=for-the-badge)](#)
+  [![SPID](https://img.shields.io/badge/SPID-Digital_Identity-0066CC?style=for-the-badge)](#)
   [![Status](https://img.shields.io/badge/Status-Alpha_Development-0052cc?style=for-the-badge)](#)
 </div>
 
@@ -19,7 +22,7 @@
 
 ## 🤝 Ringraziamento all'ecosistema Omarchy
 
-> **Acknowledgement Originale:** Questo progetto non sarebbe possibile senza lo straordinario lavoro del team di **[Omarchy](https://github.com/omacom-io/omarchy-iso)**.
+> **Acknowledgement Originale:** Questo progetto non sarebbe possibile senza lo straordinario lavoro del team di **[Omarchy](https://omarchy.org)**.
 
 ITA-OS non è un banale "fork" della distribuzione, ma si basa strategicamente sul formidabile "*reproducible build system*" e sui layer architetturali creati da Omarchy. 
 Avvalendoci di questo solido substrato, ITA-OS si configura come un **Overlay di livello Enterprise**: demandiamo agli strumenti upstream la corretta gestione del core di basso livello (kernel, driver di base), concentrando tutte le nostre risorse sullo sviluppo dell'ecosistema applicativo italiano protetto (Firma Digitale, CIE, interfacce PA), garantendone la massima sicurezza e compatibilità incrociata.
