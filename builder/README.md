@@ -1,39 +1,52 @@
-# Omarchy ISO
+<div align="center">
+  <h1>⚙️ ITA-OS Build Engine</h1>
+  **Il generatore deterministico delle immagini ISO ufficiali.**
 
-The Omarchy ISO streamlines [the installation of Omarchy](https://learn.omacom.io/2/the-omarchy-manual/50/getting-started). It includes the Omarchy Configurator as a front-end to archinstall and automatically launches the [Omarchy Installer](https://github.com/basecamp/omarchy) after base arch has been setup.
+  [![Module](https://img.shields.io/badge/Module-Build_Engine-4B4B4B?style=for-the-badge)](#)
+  [![Technology](https://img.shields.io/badge/Tech-Chroot_Arch-1793D1?style=for-the-badge)](#)
+</div>
 
-## Downloading the latest ISO
+<br/>
 
-See the ISO link on [omarchy.org](https://omarchy.org).
+Questo modulo è il motore di build di **ITA-OS**. Basato sull'architettura di `omarchy-iso`, permette di fondere il sistema base Arch Linux con il layer di configurazione italiana e i pacchetti locali certificati.
 
-## Creating the ISO
+---
 
-Run `./bin/omarchy-iso-make` and the output goes into `./release`. You can build from your local $OMARCHY_PATH for testing by using `--local-source` or from a checkout of the dev branch (instead of master) by using `--dev`.
+## 🚀 Ciclo di Build ITA-OS
 
-### Environment Variables
+Il processo di generazione automatizza la creazione di un ambiente Live-Installabile:
 
-You can customize the repositories used during the build process by passing in variables:
+1.  **Bootstrap**: Preparazione dell'ambiente Arch Linux in chroot.
+2.  **Overlay**: Iniezione delle configurazioni presenti in `/configs`.
+3.  **Local Repo**: Installazione dei pacchetti compilati presenti in `/packages/repo`.
+4.  **Seal**: Sigillatura dell'immagine ISO e firma GPG.
 
-- `OMARCHY_INSTALLER_REPO` - GitHub repository for the installer (default: `basecamp/omarchy`)
-- `OMARCHY_INSTALLER_REF` - Git ref (branch/tag) for the installer (default: `master`)
+### Comandi Rapidi
 
-Example usage:
-```bash
-OMARCHY_INSTALLER_REPO="myuser/omarchy-fork" OMARCHY_INSTALLER_REF="some-feature" ./bin/omarchy-iso-make
-```
+- **Generazione ISO**:
+  ```bash
+  ./bin/omarchy-iso-make
+  ```
+- **Test in Virtual Machine (Fast boot)**:
+  ```bash
+  ./bin/omarchy-iso-boot release/ita-os.iso
+  ```
+- **Rilascio Ufficiale**:
+  ```bash
+  ./bin/omarchy-iso-release VERSION
+  ```
 
-## Testing the ISO
+---
 
-Run `./bin/omarchy-iso-boot [release/omarchy.iso]`.
+## 🛠️ Personalizzazione
+È possibile forzare l'uso di specifici repository o branch durante la build tramite variabili d'ambiente:
+- `OMARCHY_INSTALLER_REPO`: Repository per l'installer.
+- `OMARCHY_INSTALLER_REF`: Branch o Tag di riferimento.
 
-## Signing the ISO
+---
 
-Run `./bin/omarchy-iso-sign [gpg-user] [release/omarchy.iso]`.
-
-## Uploading the ISO
-
-Run `./bin/omarchy-iso-upload [release/omarchy.iso]`. This requires you've configured rclone (use `rclone config`).
-
-## Full release of the ISO
-
-Run `./bin/omarchy-iso-release VERSION` to create, test, sign, and upload the ISO in one flow. Add `--rc` to release an RC build instead.
+<div align="center">
+  <i>Parte dell'ecosistema ITA-OS realizzato da <b><a href="https://labeltune.eu">Labeltune</a></b>.</i>
+  <br/>
+  Rilasciato sotto licenza <a href="../LICENSE">MIT</a>.
+</div>
