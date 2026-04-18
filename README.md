@@ -3,6 +3,9 @@
 
   # ITA-OS (Sistema Operativo Italia)
   **Un'infrastruttura sicura, sovrana e moderna per la Pubblica Amministrazione.**
+  <br/>
+  Realizzato con ❤️ da **[Labeltune](https://labeltune.eu)**
+
 
   [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
   [![Linux Kernel](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](#)
@@ -48,6 +51,17 @@ Il codice sorgente è organizzato modularmente per garantire massima ispezionabi
 
 ---
 
+## 🤖 AI-Ready & Vendor Agnostic
+
+ITA-OS è progettato per essere il substrato ideale per l'integrazione dell'Intelligenza Artificiale nella PA:
+
+- **Indipendenza dai Fornitori**: Architettura ottimizzata per far girare modelli AI (LLM, Vision, ecc.) sia in locale che tramite API, garantendo che lo Stato non sia vincolato a un singolo provider cloud o tecnologico.
+- **Integrazione Nativa**: Librerie e runtime AI (Python, ROCm, CUDA, OpenVINO) pre-configurati e isolati per garantire prestazioni massime e sicurezza del dato.
+- **Privacy by Design**: Possibilità di eseguire inferenza AI totalmente offline su hardware governativo, proteggendo i dati sensibili dei cittadini.
+
+
+---
+
 ## 🔄 Lifecycle e Aggiornamenti ("Zero Breakage")
 
 - Quando Omarchy (o Arch Linux) avanza di versione, il nostro sistema CI/CD lo recepisce generando automagicamente una **ISO in Staging**.
@@ -73,5 +87,8 @@ Ambiente richiesto: SO basato su Arch Linux e utility di isolamento per il chroo
 ---
 
 <div align="center">
-  <i>Costruito per l'Italia, alimentato dall'Open Source.</i>
+  <i>Costruito per l'Italia, alimentato dall'Open Source e dall'innovazione di <b><a href="https://labeltune.eu">Labeltune</a></b>.</i>
+  <br/>
+  Rilasciato sotto licenza <a href="./LICENSE">MIT</a>.
 </div>
+
