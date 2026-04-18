@@ -9,8 +9,10 @@
   [![Hyprland](https://img.shields.io/badge/Hyprland-00a884?style=for-the-badge&logo=hyprland&logoColor=white)](#)
   [![KDE Plasma](https://img.shields.io/badge/KDE_Plasma-1D99F3?style=for-the-badge&logo=kde&logoColor=white)](#)
   [![Security](https://img.shields.io/badge/Security-Zero_Trust-D32F2F?style=for-the-badge)](#)
+  [![GovTech](https://img.shields.io/badge/GovTech-Digital_Sovereignty-009246?style=for-the-badge)](#)
   [![CIE](https://img.shields.io/badge/CIE-Smart_Card_PA-0052cc?style=for-the-badge)](#)
   [![SPID](https://img.shields.io/badge/SPID-Digital_Identity-0066CC?style=for-the-badge)](#)
+  [![Templates](https://img.shields.io/badge/Workplace-LibreOffice_PA-DD4814?style=for-the-badge)](#)
   [![Status](https://img.shields.io/badge/Status-Alpha_Development-0052cc?style=for-the-badge)](#)
 </div>
 
