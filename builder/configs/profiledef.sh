@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="omarchy"
-iso_label="OMARCHY_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="Omarchy <https://omarchy.org>"
-iso_application="Omarchy Installer"
+iso_name="ita-os"
+iso_label="ITA-OS_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
+iso_publisher="ITA-OS Team <https://github.com/GiorgioDeCillis/ita-os>"
+iso_application="ITA-OS Installer"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
