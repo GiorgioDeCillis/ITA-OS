@@ -1,12 +1,14 @@
-# Install omarchy SDDM theme
+# Install ITA-OS SDDM theme
 omarchy-refresh-sddm
 
 # Setup SDDM login service
 sudo mkdir -p /etc/sddm.conf.d
 if [[ ! -f /etc/sddm.conf.d/autologin.conf ]]; then
+  # Use the current user (which is the target user in the chroot)
+  TARGET_USER="${USER:-ita-os}"
   cat <<EOF | sudo tee /etc/sddm.conf.d/autologin.conf
 [Autologin]
-User=$USER
+User=$TARGET_USER
 Session=hyprland-uwsm
 
 [Theme]

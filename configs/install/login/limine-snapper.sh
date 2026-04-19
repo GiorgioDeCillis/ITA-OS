@@ -87,6 +87,12 @@ fi
 
 echo "mkinitcpio hooks re-enabled"
 
+# Patch /etc/os-release so Limine names the entry ITA-OS
+if grep -q "Omarchy" /etc/os-release; then
+  sudo sed -i 's/^NAME=.*/NAME="ITA-OS"/' /etc/os-release
+  sudo sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="ITA-OS"/' /etc/os-release
+fi
+
 sudo limine-update
 
 # Verify that limine-update actually added boot entries

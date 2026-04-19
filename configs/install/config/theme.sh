@@ -25,3 +25,6 @@ sudo chmod a+rw /etc/brave/policies/managed
 
 # Default Chromium to follow system appearance ("device") instead of dark
 echo '{"browser":{"theme":{"color_scheme":0}}}' | sudo tee /usr/lib/chromium/initial_preferences >/dev/null
+
+# Ensure KDE icon theme is set and cache is refreshed
+sudo gtk-update-icon-cache -f /usr/share/icons/Yaru 2>/dev/null || true

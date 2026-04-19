@@ -24,25 +24,6 @@ p11-kit
 # (da AUR o dal nostro repo packages)
 ttf-titillium-web
 
-# --- KDE Plasma (per profili Windows-like e Mac-like) ---
-plasma-desktop
-plasma-workspace
-plasma-systemmonitor
-plasma-nm
-plasma-pa
-kde-gtk-config
-kdeplasma-addons
-kscreen
-sddm-kcm
-breeze
-breeze-gtk
-konsole
-dolphin
-ark
-spectacle
-gwenview
-okular
-
 # --- Branding & Customizations ---
 ita-os-branding
 # ita-os-profile-switch (da inserire quando impacchettato)

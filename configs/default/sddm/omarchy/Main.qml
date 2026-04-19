@@ -35,7 +35,7 @@ Rectangle {
         width: parent.width
 
         Image {
-            source: "logo.svg"
+            source: "logo.png"
             width: root.width * 0.35
             height: Math.round(width * sourceSize.height / sourceSize.width)
             fillMode: Image.PreserveAspectFit
